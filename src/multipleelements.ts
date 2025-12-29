@@ -19,28 +19,17 @@ import { test, Browser, chromium, Page, Locator } from '@playwright/test';
     }
 
     //index
-    for(let i=0; i<rightpanelLinks.length; i++)
-    {
+    for (let i = 0; i < rightpanelLinks.length; i++) {
         console.log(rightpanelLinks[i]);
     }
 
     //capture all the footers
-    let footerlinks:Locator[]  = await page.locator('footer a').all()
+    let footerlinks: Locator[] = await page.locator('footer a').all()
     console.log(footerlinks.length);
-    for(let e of footerlinks)
-    {
+    for (let e of footerlinks) {
         console.log(await e.innerText());
 
     }
-
-
-
-
-
-
-
-
-
 }
 )
     ();
